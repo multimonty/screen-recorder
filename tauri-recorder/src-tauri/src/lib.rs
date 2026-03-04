@@ -18,9 +18,9 @@ fn start_recording() -> RecordingResult {
     let python_path = "/usr/bin/python3";
 
     // Get absolute path to recording script
+    // When running in dev/build, current_dir is already src-tauri/
     let script_path = std::env::current_dir()
         .unwrap()
-        .join("src-tauri")
         .join("screen_recorder.py");
 
     // Execute Python script with "start" command
@@ -67,9 +67,9 @@ fn stop_recording() -> RecordingResult {
     let python_path = "/usr/bin/python3";
 
     // Get absolute path to recording script
+    // When running in dev/build, current_dir is already src-tauri/
     let script_path = std::env::current_dir()
         .unwrap()
-        .join("src-tauri")
         .join("screen_recorder.py");
 
     // Execute Python script with "stop" command

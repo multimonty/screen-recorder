@@ -1,0 +1,16 @@
+"$schema" = "../gen/schemas/schema.json"
+
+[[permission]]
+identifier = "allow-start-recording"
+description = "Enables the start_recording command"
+commands.allow = ["start_recording"]
+
+[[permission]]
+identifier = "allow-stop-recording"
+description = "Enables the stop_recording command"
+commands.allow = ["stop_recording"]
+
+[[set]]
+identifier = "allow-all-commands"
+description = "Allow all screen recording commands"
+permissions = ["allow-start-recording", "allow-stop-recording"]
